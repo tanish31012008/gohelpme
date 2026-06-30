@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 </head>
 
@@ -37,6 +37,8 @@
         </a>
 
     </nav>
+
+
 
 
 
@@ -67,16 +69,12 @@
             <p>
 
                 Every contribution, no matter how small,
-
                 brings her one step closer to owning
-
                 her dream phone.
 
             </p>
 
 
-
-            <!-- Progress Card -->
 
             <div class="progress-card">
 
@@ -96,11 +94,15 @@
 
                 </div>
 
+
+
                 <div class="progress">
 
                     <div class="progress-fill"></div>
 
                 </div>
+
+
 
                 <div class="money">
 
@@ -136,13 +138,11 @@
 
 
 
-    <!-- ================= DONATE ================= -->
+    <!-- ================= DONATION ================= -->
 
     <section class="donation-section" id="donate">
 
         <div class="donation-card">
-
-
 
             <h2>
 
@@ -150,73 +150,69 @@
 
             </h2>
 
-
-
             <p>
 
                 All UPI Apps Accepted
 
             </p>
 
-
-
             <img src="qr.png"
 
-                class="qr"
+                 class="qr"
 
-                alt="UPI QR Code">
-
-
-
-            <a
-
-             <img src="qr.png" class="qr" alt="UPI QR Code">
-
-<a
-    href="upi://pay?pa=hency2401p-1@okicici&pn=PARVANI%20HENCY%20MUKESH&cu=INR"
-    class="donate-button">
-
-    ❤️ Donate via UPI
-
-</a>
-
-<!-- Paste Here -->
-
-<div class="upi-copy">
-
-    <p>UPI ID</p>
-
-    <div class="upi-box">
-
-        <span id="upiId">
-            hency2401p-1@okicici
-        </span>
-
-        <button id="copyBtn">
-
-            📋 Copy
-
-        </button>
-
-    </div>
-
-</div>
-
-<div class="upi-apps">
-
-    Google Pay • PhonePe • Paytm • BHIM
-
-</div>
-
-                ❤️ Donate via UPI
-
-            </a>
+                 alt="UPI QR Code">
 
 
 
-            <div class="upi-apps">
+            <h3 class="upi-title">
 
-                Google Pay • PhonePe • Paytm • BHIM
+                Choose Payment Method
+
+            </h3>
+
+
+
+            <div class="upi-buttons">
+
+                <button class="upi-btn" onclick="payUPI()">
+
+                    ❤️ Pay with UPI
+
+                </button>
+
+            </div>
+
+
+
+            <div class="copy-section">
+
+                <button class="copy-btn"
+
+                        onclick="copyUPI()">
+
+                    📋 Copy UPI ID
+
+                </button>
+
+            </div>
+
+
+
+            <p id="copyMessage"></p>
+
+
+
+            <div class="upi-id">
+
+                <strong>
+
+                    UPI ID
+
+                </strong>
+
+                <br><br>
+
+                hency2401p-1@okicici
 
             </div>
 
@@ -260,7 +256,7 @@
 
                 <ul>
 
-                    <li>A19 Pro Chip</li>
+                    <li>A19 Chip</li>
 
                     <li>48 MP Camera</li>
 
@@ -302,44 +298,47 @@
 
     <footer>
 
-        ❤️
-
-        Thank you for supporting dreams.
+        ❤️ Thank you for supporting dreams.
 
     </footer>
 
-<footer>
 
-    ❤️ Thank you for supporting dreams.
 
-</footer>
 
-<!-- Desktop Popup -->
 
-<div class="popup-overlay" id="popup">
+    <!-- ================= POPUP ================= -->
 
-    <div class="popup">
+    <div class="popup-overlay" id="popup">
 
-        <h2>💻 Desktop Detected</h2>
+        <div class="popup">
 
-        <p>
-            UPI payments can only be made from a mobile device.
-            Please scan the QR code using your phone.
-        </p>
+            <h2>
 
-        <button id="closePopup">
-            Close
-        </button>
+                💻 Desktop Detected
+
+            </h2>
+
+            <p>
+
+                UPI payments can only be made from a mobile device.
+
+                Please scan the QR code using your phone.
+
+            </p>
+
+            <button id="closePopup">
+
+                Close
+
+            </button>
+
+        </div>
 
     </div>
 
-</div>
 
-<script src="script.js"></script>
 
-</body>
 
-</html>
 
     <script src="script.js"></script>
 

@@ -1,64 +1,91 @@
+// ==============================
+// PAGE LOAD ANIMATION
+// ==============================
+
 window.addEventListener("load", () => {
-
     document.body.classList.add("loaded");
-
 });
 
-const donateBtn = document.querySelector(".donate-button");
+// ==============================
+// POPUP
+// ==============================
 
 const popup = document.getElementById("popup");
-
 const closePopup = document.getElementById("closePopup");
 
-donateBtn.addEventListener("click", function(e){
+if (closePopup) {
 
-    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-    if(!isMobile){
-
-        e.preventDefault();
-
-        popup.classList.add("active");
-
-    }
-
-});
-
-closePopup.addEventListener("click", ()=>{
-
-    popup.classList.remove("active");
-
-});
-
-popup.addEventListener("click",(e)=>{
-
-    if(e.target===popup){
+    closePopup.addEventListener("click", () => {
 
         popup.classList.remove("active");
 
+    });
+
+}
+
+if (popup) {
+
+    popup.addEventListener("click", (e) => {
+
+        if (e.target === popup) {
+
+            popup.classList.remove("active");
+
+        }
+
+    });
+
+}
+
+// ==============================
+// UPI DETAILS
+// ==============================
+
+const upiID = "hency2401p-1@okicici";
+
+const payeeName = "PARVANI HENCY MUKESH";
+
+// ==============================
+// COPY UPI
+// ==============================
+
+function copyUPI() {
+
+    navigator.clipboard.writeText(upiID);
+
+    const msg = document.getElementById("copyMessage");
+
+    msg.innerHTML = "✅ UPI ID Copied Successfully!";
+
+    setTimeout(() => {
+
+        msg.innerHTML = "";
+
+    }, 2500);
+
+}
+
+// ==============================
+// PAY WITH UPI
+// ==============================
+
+function payUPI() {
+
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (!isMobile) {
+
+        popup.classList.add("active");
+
+        return;
+
     }
 
-});
-const copyBtn = document.getElementById("copyBtn");
+    navigator.clipboard.writeText(upiID);
 
-copyBtn.addEventListener("click", async () => {
+    const url =
+        `upi://pay?pa=${upiID}&pn=${encodeURIComponent(payeeName)}&cu=INR&tn=${encodeURIComponent("Help My Sister Buy iPhone 17")}`;
 
-    try{
+    window.location.href = url;
 
-        await navigator.clipboard.writeText("hency2401p-1@okicici");
-
-        copyBtn.innerHTML="✅ Copied";
-
-        setTimeout(()=>{
-
-            copyBtn.innerHTML="📋 Copy";
-
-        },2000);
-
-    }catch{
-
-        alert("Couldn't copy the UPI ID.");
-
-    }
-
-});
+}
