@@ -1,0 +1,656 @@
+/* =========================
+   GOOGLE STYLE RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:linear-gradient(135deg,#f8f9fa,#eef7f2,#ffffff);
+
+    color:#222;
+
+    overflow-x:hidden;
+
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+
+    width:100%;
+
+    padding:25px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    position:sticky;
+
+    top:0;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(20px);
+
+    z-index:999;
+
+}
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:800;
+
+}
+
+.share-btn{
+
+    text-decoration:none;
+
+    color:#fff;
+
+    background:#02a95c;
+
+    padding:14px 28px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.share-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:#02854b;
+
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    max-width:1250px;
+
+    margin:auto;
+
+    padding:80px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+.left{
+
+    flex:1;
+
+}
+
+.badge{
+
+    display:inline-block;
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    background:#dff7e8;
+
+    color:#0a8c48;
+
+    font-weight:600;
+
+}
+
+.left h1{
+
+    margin-top:25px;
+
+    font-size:65px;
+
+    line-height:1.1;
+
+}
+
+.left h1 span{
+
+    color:#02a95c;
+
+}
+
+.left p{
+
+    margin-top:20px;
+
+    color:#666;
+
+    font-size:20px;
+
+    max-width:550px;
+
+}
+
+.right{
+
+    flex:1;
+
+    text-align:center;
+
+}
+
+.right img{
+
+    width:100%;
+
+    max-width:520px;
+
+    transition:.4s;
+
+}
+
+.right img:hover{
+
+    transform:translateY(-10px) scale(1.03);
+
+}
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-card{
+
+    margin-top:40px;
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:24px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+}
+
+.progress-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.progress{
+
+    width:100%;
+
+    height:12px;
+
+    background:#e8e8e8;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+}
+
+.progress-fill{
+
+    width:.99%;
+
+    height:100%;
+
+    background:#02a95c;
+
+}
+
+.money{
+
+    margin-top:20px;
+
+}
+
+.money h2{
+
+    color:#02a95c;
+
+}
+
+.money p{
+
+    margin-top:6px;
+
+}
+
+/* =========================
+   DONATION
+========================= */
+
+.donation-section{
+
+    max-width:900px;
+
+    margin:20px auto 80px;
+
+    padding:0 20px;
+
+}
+
+.donation-card{
+
+    background:#fff;
+
+    border-radius:30px;
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+}
+
+.donation-card h2{
+
+    font-size:36px;
+
+}
+
+.donation-card p{
+
+    color:#666;
+
+    margin-top:10px;
+
+}
+
+.qr{
+
+    display:block;
+
+    width:100%;
+
+    max-width:320px;
+
+    height:auto;
+
+    margin:35px auto;
+
+    border-radius:18px;
+
+    object-fit:contain;
+
+}
+
+.donate-button{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    background:#02a95c;
+
+    color:#fff;
+
+    padding:18px 38px;
+
+    border-radius:14px;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.donate-button:hover{
+
+    background:#02854b;
+
+    transform:translateY(-3px);
+
+}
+
+.upi-apps{
+
+    margin-top:20px;
+
+    color:#777;
+
+}
+
+/* =========================
+   PHONE CARD
+========================= */
+
+.phone-section{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:0 20px 100px;
+
+}
+
+.phone-card{
+
+    background:#fff;
+
+    border-radius:30px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+    padding:45px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+}
+
+.small-tag{
+
+    background:#dff7e8;
+
+    color:#02a95c;
+
+    padding:8px 15px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.phone-card h2{
+
+    font-size:40px;
+
+    margin-top:20px;
+
+}
+
+.storage{
+
+    display:block;
+
+    color:#777;
+
+    margin-top:8px;
+
+}
+
+.phone-card ul{
+
+    margin-top:20px;
+
+    padding-left:20px;
+
+    line-height:2;
+
+}
+
+.price-box{
+
+    text-align:right;
+
+}
+
+.price-box h1{
+
+    color:#02a95c;
+
+    font-size:54px;
+
+}
+
+.price-box p{
+
+    color:#777;
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    text-align:center;
+
+    padding:40px;
+
+    color:#777;
+
+    font-size:18px;
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+.qr{
+
+    max-width:240px;
+
+}
+
+.donation-card{
+
+    padding:25px;
+
+}
+
+.donate-button{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.hero{
+
+    flex-direction:column-reverse;
+
+    text-align:center;
+
+}
+
+.left h1{
+
+    font-size:45px;
+
+}
+
+.left p{
+
+    margin:auto;
+
+    margin-top:20px;
+
+}
+
+.progress-header{
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.phone-card{
+
+    text-align:center;
+
+    justify-content:center;
+
+}
+
+.price-box{
+
+    text-align:center;
+
+}
+
+nav{
+
+    padding:20px;
+
+}
+
+.logo{
+
+    font-size:22px;
+
+}
+
+}
+/* =========================
+   PAGE LOAD ANIMATION
+========================= */
+
+body{
+    opacity:0;
+    transition:opacity .5s ease;
+}
+
+body.loaded{
+    opacity:1;
+}
+/* =========================
+   POPUP
+========================= */
+
+.popup-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    visibility:hidden;
+
+    opacity:0;
+
+    transition:.3s;
+
+    z-index:9999;
+
+}
+
+.popup-overlay.active{
+
+    visibility:visible;
+
+    opacity:1;
+
+}
+
+.popup{
+
+    background:white;
+
+    width:90%;
+
+    max-width:420px;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.2);
+
+}
+
+.popup h2{
+
+    margin-bottom:15px;
+
+}
+
+.popup p{
+
+    color:#666;
+
+    line-height:1.6;
+
+}
+
+.popup button{
+
+    margin-top:25px;
+
+    border:none;
+
+    background:#02a95c;
+
+    color:white;
+
+    padding:14px 35px;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.popup button:hover{
+
+    background:#02854b;
+
+}
