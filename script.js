@@ -7,85 +7,70 @@ window.addEventListener("load", () => {
 });
 
 // ==============================
-// POPUP
-// ==============================
-
-const popup = document.getElementById("popup");
-const closePopup = document.getElementById("closePopup");
-
-if (closePopup) {
-
-    closePopup.addEventListener("click", () => {
-
-        popup.classList.remove("active");
-
-    });
-
-}
-
-if (popup) {
-
-    popup.addEventListener("click", (e) => {
-
-        if (e.target === popup) {
-
-            popup.classList.remove("active");
-
-        }
-
-    });
-
-}
-
-// ==============================
-// UPI DETAILS
+// UPI ID
 // ==============================
 
 const upiID = "hency2401p-1@okicici";
 
-const payeeName = "PARVANI HENCY MUKESH";
+const copyBtn = document.getElementById("copyBtn");
+const copyMessage = document.getElementById("copyMessage");
+const upiText = document.getElementById("upiText");
 
 // ==============================
-// COPY UPI
+// COPY FUNCTION
 // ==============================
 
-function copyUPI() {
+async function copyUPI() {
 
-    navigator.clipboard.writeText(upiID);
+    try {
 
-    const msg = document.getElementById("copyMessage");
+        await navigator.clipboard.writeText(upiID);
 
-    msg.innerHTML = "✅ UPI ID Copied Successfully!";
+        if (copyBtn) {
+            copyBtn.innerHTML = "✅ Copied!";
+        }
 
-    setTimeout(() => {
+        if (copyMessage) {
+            copyMessage.innerHTML =
+                "UPI ID copied successfully. Open Google Pay, PhonePe, Paytm or any UPI app and paste it.";
+        }
 
-        msg.innerHTML = "";
+        setTimeout(() => {
 
-    }, 2500);
+            if (copyBtn) {
+                copyBtn.innerHTML = "📋 Copy UPI ID";
+            }
+
+        }, 2000);
+
+    }
+
+    catch (err) {
+
+        alert("Couldn't copy the UPI ID.");
+
+    }
 
 }
 
 // ==============================
-// PAY WITH UPI
+// CLICKING THE UPI ID ALSO COPIES
 // ==============================
 
-function payUPI() {
+if (upiText) {
 
-    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    upiText.style.cursor = "pointer";
 
-    if (!isMobile) {
+    upiText.addEventListener("click", copyUPI);
 
-        popup.classList.add("active");
+}
 
-        return;
+// ==============================
+// COPY BUTTON
+// ==============================
 
-    }
+if (copyBtn) {
 
-    navigator.clipboard.writeText(upiID);
-
-    const url =
-        `upi://pay?pa=${upiID}&pn=${encodeURIComponent(payeeName)}&cu=INR&tn=${encodeURIComponent("Help My Sister Buy iPhone 17")}`;
-
-    window.location.href = url;
+    copyBtn.addEventListener("click", copyUPI);
 
 }
