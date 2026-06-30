@@ -39,3 +39,26 @@ popup.addEventListener("click",(e)=>{
     }
 
 });
+const copyBtn = document.getElementById("copyBtn");
+
+copyBtn.addEventListener("click", async () => {
+
+    try{
+
+        await navigator.clipboard.writeText("hency2401p-1@okicici");
+
+        copyBtn.innerHTML="✅ Copied";
+
+        setTimeout(()=>{
+
+            copyBtn.innerHTML="📋 Copy";
+
+        },2000);
+
+    }catch{
+
+        alert("Couldn't copy the UPI ID.");
+
+    }
+
+});

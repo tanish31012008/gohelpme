@@ -654,3 +654,68 @@ body.loaded{
     background:#02854b;
 
 }
+.upi-copy{
+
+    margin-top:35px;
+
+}
+
+.upi-copy p{
+
+    color:#777;
+
+    margin-bottom:10px;
+
+}
+
+.upi-box{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    background:#f5f5f5;
+
+    border-radius:14px;
+
+    padding:15px 18px;
+
+    flex-wrap:wrap;
+
+}
+
+.upi-box span{
+
+    font-weight:600;
+
+    word-break:break-all;
+
+}
+
+.upi-box button{
+
+    border:none;
+
+    background:#02a95c;
+
+    color:white;
+
+    padding:10px 20px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.upi-box button:hover{
+
+    background:#02854b;
+
+}
